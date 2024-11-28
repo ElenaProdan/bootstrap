@@ -1,0 +1,27 @@
+body {
+  background-color: #0d6efd; /* Синий цвет */
+  color: white;
+}
+.navbar-custom {
+    background-color: white; /* Белый фон панели */
+    border-bottom: 1px solid #ddd; /* Тонкая линия внизу */
+    padding: 10px 20px; /* Отступы */
+  }
+  .navbar-brand img {
+    height: 40px; /* Размер логотипа */
+  }
+  .nav-link {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+    color: #555; /* Серый цвет кнопок */
+    margin-right: 15px; /* Отступ между кнопками */
+    text-transform: uppercase; /* Заглавные буквы */
+    transition: color 0.3s ease;
+  }
+  .nav-link:hover {
+    color: #d4a7a7; /* Розовый оттенок при наведении */
+  }
+  .nav-link.active {
+    color: #d4a7a7; /* Активная кнопка */
+    font-weight: 700; /* Жирный шрифт активной кнопки */
+  }
