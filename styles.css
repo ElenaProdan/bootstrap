@@ -1,43 +1,38 @@
 /* Общие стили */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Merriweather', serif !important;
+  margin-top: 150px;
 }
 
 /* Стили для закрепленной панели */
 .navbar-custom {
-  background-color: #ffffff; /* Темный малиновый цвет */
+  background-color: #ffffff; /* Белый фон */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Небольшая дымка */
-  
 }
 
 /* Логотип */
-.navbar-brand img {
+.navbar-custom .navbar-brand img {
   height: 100px;
   padding-left: 50px;
 }
 
-/* Стили для кнопок */
-.nav-link {
-  color: rgb(234, 99, 189);
+/* Стили для кнопок навигации */
+.navbar-custom .nav-link {
+  color: rgba(234, 99, 189, 0.585);
   text-decoration: none;
-  margin: 0 25px;
   font-size: 18px;
+  transition: color 0.5s ease; /* Плавное изменение цвета */
 }
 
-/* Эффект при наведении */
-.nav-link {
-  transition: color 0.5s ease; /* Плавное изменение цвета за 0.5 секунд */
+/* Эффект при наведении на кнопки навигации */
+.navbar-custom .nav-link:hover {
+  color: rgb(255, 240, 242); /* Цвет при наведении */
 }
-
-.nav-link:hover {
-  color:rgb(255, 240, 242)); /* Цвет при наведении */
-}
-
 
 /* Стили для контейнера навигации */
 .navbar-custom .container-fluid {
@@ -45,6 +40,18 @@ body {
   justify-content: space-between;
   align-items: center;
   padding-right: 50px;
+}
+
+/* Панель управления: элементы в 1 ряд */
+.navbar-nav {
+  display: flex;
+  justify-content: space-evenly; /* Равномерно распределяет элементы */
+  width: 100%; /* Занимает всю ширину */
+  margin: 0; /* Убираем отступы */
+}
+
+.navbar-nav .nav-item {
+  margin: 0 15px; /* Отступы между элементами */
 }
 
 /* Стили для дымки под панелью */
@@ -58,10 +65,6 @@ body {
   background: rgba(255, 255, 255, 0.237);
 }
 
-/* Убираем отступ сверху у контента, чтобы он не перекрывал панель */
-body {
-  margin-top: 150px;
-}
 /* Основной контейнер */
 .main-container {
   display: flex;
@@ -71,10 +74,14 @@ body {
 
 /* Левый контейнер с кнопкой */
 .left-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 45%;
 }
 
-.btn-record {
+/* Кнопка записи */
+.left-container .btn-record {
   display: inline-block;
   padding: 15px 25px;
   background-color: #ff7891;
@@ -85,8 +92,8 @@ body {
   transition: background-color 0.5s ease;
 }
 
-.btn-record:hover {
-  background-color: #ff496f; /* Меняем цвет при наведении */
+.left-container .btn-record:hover {
+  background-color: #ff496f; /* Цвет при наведении */
 }
 
 /* Правый контейнер с каруселью */
@@ -94,8 +101,26 @@ body {
   width: 50%;
 }
 
-/* Стили для карусели */
+/* Стили карусели */
 .carousel-inner img {
   width: 100%;
   height: auto;
+}
+
+/* Устанавливаем размеры карусели */
+.carousel {
+  width: 70%; /* Карусель занимает 70% от правого контейнера */
+  margin: 0 auto; /* Центрируем карусель */
+  padding: 10px; /* Устанавливаем внутренние отступы */
+  box-sizing: border-box; /* Учитываем padding в ширине карусели */
+}
+
+/* Настраиваем изображения в карусели */
+.carousel-item img {
+  width: calc(100% - 20px); /* Учитываем padding карусели (10px с каждой стороны) */
+  height: auto; /* Сохраняем пропорции */
+  object-fit: cover; /* Обрезаем изображение, чтобы оно соответствовало контейнеру */
+  object-position: center; /* Центрируем изображение */
+  margin-top: -35%; /* Равномерно убираем 7.5% сверху */
+  margin-bottom: -36%; /* Равномерно убираем 7.5% снизу */
 }
