@@ -1,0 +1,109 @@
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .back-panel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .back-button {
+    background-color: #ff7891;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .reviews-container {
+    padding: 100px 0;
+    text-align: center;
+    background: rgba(255, 120, 145, 0.7); /* Розовый полупрозрачный фон */
+    min-height: 100vh;
+  }
+  
+  .review-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  
+  .review-box {
+    margin: 30px 0;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .review-input, .procedure-input {
+    width: 97%;
+    height: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #ff7891;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .submit-review {
+    background-color: #ff7891;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .reviews-display {
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 60%;
+    margin: 20px auto;
+  }
+  
+  .review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .review:last-child {
+    border-bottom: none;
+  }
+  
+  .review-alert {
+    background-color: #ff7891;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 80%;
+    margin: 10px auto;
+    text-align: left;
+  }
+  
+  .review-alert strong {
+    font-weight: bold;
+  }
+  

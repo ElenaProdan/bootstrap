@@ -1,7 +1,30 @@
-<style>
-    body {
-      background-color: #dc3545; /* Красный цвет */
-      color: white;
-    }
-    </style>
-  ОТЗЫВЫ 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="recstyles.css">
+  <title>Отзывы</title>
+</head>
+<body>
+  <div class="back-panel">
+    <button class="back-button" onclick="window.location.href='index.html'">Назад</button>
+  </div>
+
+  <div class="reviews-container">
+    <h1 class="review-title">Ваш отзыв поможет нам стать лучше.</h1>
+    
+    <div class="review-box">
+      <textarea class="review-input" placeholder="Вам понравились наши услуги?"></textarea>
+      <textarea class="procedure-input" placeholder="Какую процедуру вы прошли?"></textarea>
+      <button class="submit-review" onclick="submitReview()">Отправить</button>
+    </div>
+
+    <div class="reviews-display">
+      <!-- Здесь будут отображаться отзывы -->
+    </div>
+  </div>
+
+  <script src="recscript.js"></script>
+</body>
+</html>
