@@ -1,0 +1,100 @@
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .back-panel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
+  .back-button {
+    background-color: #ff7891;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .gallery-container {
+    padding: 150px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .gallery-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    opacity: 0; /* Скрыть ряды по умолчанию */
+    transition: opacity 1s ease-in-out; /* Плавное появление */
+  }
+  
+  .gallery-row.active {
+    opacity: 1; /* Делаем видимым при активации */
+  }
+  
+  
+  .gallery-item {
+    width: calc(25% - 30px);
+    text-align: center;
+  }
+  
+  .gallery-item img {
+    width: 100%; /* Ширина 100% от контейнера */
+    height: 400px; /* Фиксированная высота */
+    object-fit: cover; /* Обрезка изображения по центру */
+    border-radius: 8px;
+  }
+  
+  
+  .rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .heart {
+    width: 24px;
+    height: 24px;
+    background: url('heart-outline.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+  }
+  
+  .heart.active {
+    background: url('heart-filled.svg') no-repeat center center;
+    background-size: contain;
+  }
+  
+  .gallery-item p {
+    margin-top: 10px;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Прокрутка по оси Y */
+  .gallery-row.active {
+    animation: fadeInUp 1s forwards;
+  }
+  
+  
