@@ -1,3 +1,4 @@
+
 function submitReview() {
     const reviewInput = document.querySelector('.review-input');
     const procedureInput = document.querySelector('.procedure-input');
